@@ -58,7 +58,7 @@ def load_model(model_name: str = "u2net"):
         net = u2net.U2NETP(3, 1)
         path = os.environ.get(
             "U2NETP_PATH",
-            os.path.expanduser(os.path.join("/", "code", "u2netp", model_name + ".pth")),
+            os.path.expanduser(os.path.join("~", ".u2net", model_name + ".pth")),
         )
         if (
             not os.path.exists(path)
